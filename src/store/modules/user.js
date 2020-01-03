@@ -53,14 +53,8 @@ const user = {
           commit('SET_AVATAR', '')
           removeToken()
           const data = response.data
-          console.log("Register.res>>>",response)
-          // 注册返回处理逻辑：1. 注册成功 return data 2. 注册账号已存在 return null
+          // console.log("Register.res>>>",response)
           if (data) {
-            // 注册账号已存在
-            // reject('Register account already exist!')
-            commit('SET_ROLES', data.roles)
-            commit('SET_NAME', data.username)
-            commit('SET_AVATAR', data.icon)  
             resolve(data)
           } 
         }).catch(error => {

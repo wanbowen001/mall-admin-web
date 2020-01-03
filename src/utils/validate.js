@@ -1,5 +1,14 @@
+import { userNameList } from '@/api/login'
+
 export function isvalidUsername(str) {
-  const valid_map = ['admin', 'test', 'wanbowen']
+  // 从后台返回账户数据
+  // const valid_map = ['admin', 'test', 'wanbowen']
+  const valid_map = userNameList().then( res => {
+    const data = res.data
+    return data
+  }).catch( error => {
+    alert(error)
+  })
   return valid_map.indexOf(str.trim()) >= 0
 }
 

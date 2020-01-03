@@ -25,7 +25,7 @@ const app = {
     TOGGLE_DEVICE: (state, device) => {
       state.device = device
     }
-  },
+  }, 
   actions: {
     ToggleSideBar: ({ commit }) => {
       commit('TOGGLE_SIDEBAR')

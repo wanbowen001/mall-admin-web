@@ -25,3 +25,9 @@ export function logout() {
   })
 }
 
+export function userNameList () {
+  return request({
+    url: '/admin/usernamelist',
+    method: 'get',
+  })
+}

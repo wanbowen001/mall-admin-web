@@ -78,7 +78,7 @@
     data() {
       const validateUsername = (rule, value, callback) => {
         if (!isvalidUsername(value)) {
-          callback(new Error('请输入正确的用户名'))
+          callback(new Error('用户名不存在，请注册'))
         } else {
           callback()
         }
